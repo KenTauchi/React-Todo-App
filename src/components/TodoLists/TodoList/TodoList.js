@@ -1,11 +1,13 @@
 import React from "react";
-import Aux from "../../../hoc/Aux";
+import classes from "./TodoList.module.css";
 
 const todoList = (props) => (
-  <Aux>
-    <li>{props.content}</li>
-    <button onClick={props.click}>Delete</button>
-  </Aux>
+  <ul className={classes.TodoList}>
+    <li>
+      <div>{props.content}</div>
+      <button onClick={props.click}>Delete</button>
+    </li>
+  </ul>
 );
 
 export default todoList;
