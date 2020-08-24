@@ -1,0 +1,28 @@
+.InputForm {
+  text-align: center;
+  background-color: aqua;
+  padding: 2rem;
+}
+
+.InputForm textarea,
+.InputForm input,
+.inputForm button {
+  display: block;
+  margin: 1rem auto;
+}
+
+.InputForm textarea {
+  width: 300px;
+  height: 150px;
+}
+
+.InputForm span {
+  margin-top: 2rem;
+  display: block;
+}
+
+.InputForm button {
+  padding: 1rem;
+  background-color: burlywood;
+  border-radius: 5px;
+}
