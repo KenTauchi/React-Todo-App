@@ -9,14 +9,6 @@ class TodoBuilder extends Component {
     todos: [],
   };
 
-  //   addContent = (event) => {
-
-  //       const newValue = event.target.desc.value
-  //     this.setState({
-  //       todos: [{ todo: newValue }],
-  //     });
-  //   };
-
   addToList = (event) => {
     event.preventDefault();
     const newValue = event.target.desc.value;
@@ -25,11 +17,10 @@ class TodoBuilder extends Component {
     }));
   };
 
-  deleteTodo = (arrindex) => {
-    const newArr = {
-      ...this.state.todos,
-    };
-    newArr.splice(arrindex, 1);
+  deleteTodo = (index) => {
+    const newList = [...this.state.todos];
+    newList.splice(index, 1);
+    this.setState({ todos: newList });
   };
 
   render() {

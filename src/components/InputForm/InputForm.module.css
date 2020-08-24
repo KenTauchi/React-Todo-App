@@ -23,6 +23,7 @@
 
 .InputForm button {
   padding: 1rem;
+  margin: 1rem;
   background-color: burlywood;
   border-radius: 5px;
 }
