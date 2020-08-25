@@ -6,7 +6,7 @@ const inputForm = (props) => (
     <span>Todo Description</span>
     <textarea name="desc" type="text" />
     <span>Due Date</span>
-    <input type="datetime-local" />
+    <input name="datetime" type="datetime-local" />
     <button type="submit">Add</button>
   </form>
 );

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import "./App.css";
 import Layout from "./components/Layout/Layout";
 import TodoBuilder from "./container/TodoBuilder/TodoBuilder";

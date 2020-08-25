@@ -9,18 +9,37 @@ class TodoBuilder extends Component {
     todos: [],
   };
 
+  componentDidMount = () => {
+    const dataExist = localStorage.getItem("todo");
+    const storage = JSON.parse(localStorage.getItem("todo"));
+    if (dataExist) {
+      this.setState({ todos: storage });
+    }
+  };
+
   addToList = (event) => {
     event.preventDefault();
     const newValue = event.target.desc.value;
-    this.setState((prevState) => ({
-      todos: [...prevState.todos, { todo: newValue }],
-    }));
+    const newDue = event.target.datetime.value;
+    this.setState(
+      (prevState) => ({
+        todos: [...prevState.todos, { todo: newValue, time: newDue }],
+      }),
+      () => {
+        this.addToStorage(this.state.todos);
+      }
+    );
+  };
+
+  addToStorage = (newState) => {
+    localStorage.setItem("todo", JSON.stringify(newState));
   };
 
   deleteTodo = (index) => {
     const newList = [...this.state.todos];
     newList.splice(index, 1);
     this.setState({ todos: newList });
+    localStorage.setItem("todo", JSON.stringify(newList));
   };
 
   render() {
@@ -32,6 +51,7 @@ class TodoBuilder extends Component {
         {this.state.todos.map((list, index) => (
           <TodoList
             content={list.todo}
+            time={list.time}
             key={index}
             click={() => {
               this.deleteTodo(index);
