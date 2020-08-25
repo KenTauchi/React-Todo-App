@@ -28,7 +28,14 @@ const todoList = (props) => {
       </Aux>
     );
   } else {
-    return <OverDueList content={props.content} time={props.time} />;
+    return (
+      <OverDueList
+        content={props.content}
+        time={duedate}
+        click={props.click}
+        id={props.id}
+      />
+    );
   }
 };
 

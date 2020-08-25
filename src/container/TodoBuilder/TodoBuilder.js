@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Aux from "../../hoc/Aux";
 import InputForm from "../../components/InputForm/InputForm";
 import TodoList from "../../components/TodoLists/TodoList/TodoList";
-// import OverDueList from "../../components/OverDueLists/OverDueList/OverDueList";
 
 class TodoBuilder extends Component {
   state = {
@@ -20,24 +19,6 @@ class TodoBuilder extends Component {
       this.setState({ todos: storage, overdue: overDueStorage });
     }
   };
-
-  // findOverdue = () => {
-  //   const time = new Date(new Date().toUTCString()).toLocaleString();
-  //   this.state.todos.map((list) => {
-  //     const listTime = new Date(list.time).toLocaleString();
-  //     console.log(list.time);
-  //     if (listTime > time) {
-  //       this.setState(
-  //         (prevState) => ({
-  //           overdue: [...prevState.overdue, list],
-  //         }),
-  //         () => {
-  //           this.addToOverdueStorage(this.state.overdue);
-  //         }
-  //       );
-  //     }
-  //   });
-  // };
 
   addToOverdueStorage = (newState) => {
     localStorage.setItem("overdue", JSON.stringify(newState));
@@ -77,13 +58,12 @@ class TodoBuilder extends Component {
           <TodoList
             content={list.todo}
             time={list.time}
-            key={index}
+            id={index}
             click={() => {
               this.deleteTodo(index);
             }}
           />
         ))}
-        ;
       </Aux>
     );
   }
