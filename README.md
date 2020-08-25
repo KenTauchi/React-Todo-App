@@ -1,3 +1,6 @@
+This is a todo app built using React.js.
+You set a due date and time for the todo. If the task is overdue, it shows in different color with alert message. All todos are stored in the localsotrage.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
