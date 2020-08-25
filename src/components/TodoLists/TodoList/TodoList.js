@@ -16,15 +16,12 @@ const todoList = (props) => {
   if (dueOver === false) {
     return (
       <Aux>
-        <ul className={classes.TodoList}>
-          <li>
-            <div>{props.content}</div>
-            <div className={classes.Due}>
-              <strong>Due: {duedate}</strong>
-            </div>
-            <button onClick={props.click}>Delete</button>
-          </li>
-        </ul>
+        <li className={classes.TodoList}>
+          <div className={classes.Due}>Due: {duedate}</div>
+          <div className={classes.Content}>{props.content}</div>
+
+          <button onClick={props.click}>Delete</button>
+        </li>
       </Aux>
     );
   } else {

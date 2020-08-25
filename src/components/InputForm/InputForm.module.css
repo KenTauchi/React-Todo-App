@@ -1,7 +1,12 @@
 .InputForm {
   text-align: center;
-  background-color: aqua;
   padding: 2rem;
+  padding-bottom: 1rem;
+  font-family: "Varela Round", sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  border-bottom: 2px solid white;
 }
 
 .InputForm textarea,
@@ -12,8 +17,8 @@
 }
 
 .InputForm textarea {
-  width: 300px;
-  height: 150px;
+  width: 500px;
+  height: 50px;
 }
 
 .InputForm span {
@@ -22,8 +27,17 @@
 }
 
 .InputForm button {
-  padding: 1rem;
+  padding: 0.3rem 1rem;
   margin: 1rem;
-  background-color: burlywood;
+  background-color: rgb(41, 135, 243);
   border-radius: 5px;
+  font-family: "Varela Round", sans-serif;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.InputForm button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s;
 }

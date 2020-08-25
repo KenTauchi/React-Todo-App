@@ -3,15 +3,13 @@ import classes from "./OverDueList.module.css";
 
 const overDueList = (props) => {
   return (
-    <ul className={classes.OverDueList}>
-      <li>
-        <div>{props.content}</div>
-        <div>
-          <strong>Due: {props.time}</strong>
-        </div>
-        <button onClick={props.click}>Delete</button>
-      </li>
-    </ul>
+    <li className={classes.OverDueList}>
+      <div className={classes.Alert}>*Overdue</div>
+      <div className={classes.Due}>Due: {props.time}</div>
+      <div className={classes.Content}>{props.content}</div>
+
+      <button onClick={props.click}>Delete</button>
+    </li>
   );
 };
 

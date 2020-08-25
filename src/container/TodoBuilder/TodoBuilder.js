@@ -53,7 +53,7 @@ class TodoBuilder extends Component {
     return (
       <Aux>
         <InputForm click={this.addToList} />
-        <hr />
+
         {this.state.todos.map((list, index) => (
           <TodoList
             content={list.todo}

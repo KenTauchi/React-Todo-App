@@ -1,3 +1,41 @@
-.OverDueList li {
-  background-color: darkcyan;
+.OverDueList {
+  margin: 1rem auto;
+  width: 50%;
+  background-color: rgb(194, 194, 194);
+  margin: 2rem auto;
+  padding: 1rem;
+  list-style-type: none;
+  border: 2px solid white;
+}
+
+.OverDueList button {
+  background-color: red;
+  color: white;
+  padding: 0.3rem;
+  margin: 2rem auto 0;
+  border-radius: 5px;
+  text-align: right;
+  display: block;
+  font-family: "Varela Round", sans-serif;
+}
+
+.OverDueList button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s;
+}
+
+.Content {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+}
+
+.Due {
+  margin-bottom: 2rem;
+  color: firebrick;
+}
+
+.Alert {
+  font-weight: bold;
+  color: firebrick;
 }

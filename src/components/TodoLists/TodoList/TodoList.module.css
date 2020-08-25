@@ -1,26 +1,35 @@
 .TodoList {
-  margin: 0;
-  padding: 0;
+  margin: 1rem auto;
+  width: 50%;
+  background-color: coral;
+  margin: 2rem auto;
+  padding: 1rem;
+  list-style-type: none;
+  border: 2px solid white;
 }
 
-.TodoList li {
-  margin: 2rem auto;
-  width: 30%;
-  background-color: coral;
-  padding: 2rem;
-  list-style-type: none;
+.Content {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
 }
 
 .TodoList button {
   background-color: red;
   color: white;
-  padding: 0.5rem;
+  padding: 0.3rem;
   margin: 2rem auto 0;
   border-radius: 5px;
   text-align: right;
   display: block;
+  font-family: "Varela Round", sans-serif;
+}
+
+.TodoList button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s;
 }
 
 .Due {
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }

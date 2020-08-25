@@ -1,10 +1,10 @@
 import React from "react";
 import Aux from "../../hoc/Aux";
+import classes from "./Layout.module.css";
 
 const layout = (props) => (
   <Aux>
-    <header>Todo List with Timer</header>
-    <main>{props.children}</main>
+    <main className={classes.Layout}>{props.children}</main>
   </Aux>
 );
 
